@@ -1,0 +1,30 @@
+{
+  "name": "html-forms",
+  "version": "0.1.0",
+  "description": "testing html form via nodejs, express, and more",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ar-to/html-forms.git"
+  },
+  "keywords": [
+    "html",
+    "forms",
+    "nodejs",
+    "express"
+  ],
+  "author": "ar-to",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ar-to/html-forms/issues"
+  },
+  "homepage": "https://github.com/ar-to/html-forms#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+}

@@ -1,0 +1,18 @@
+
+#statusBar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#status {
+  height: 3px;
+  background-color: orange;
+  width: 0;
+}
+
+.status-fade {
+  transition: .8s ease-in-out;
+  opacity: 0;
+}

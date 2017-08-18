@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Form Tests</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="statusBar">
+    <div id="status"></div>
+  </div>
+  <article>
+    <main>
+      <input type="text" id="onInput" value="on input" />
+      <p id="onInput-p"></p>
+    </main>
+    <main>
+      <input type="text" id="onChange" value="on change" />
+      <p id="onChange-p"></p>
+    </main>
+  </article>
+  <article>
+    <h3>Test Form 1</h3>
+    <form method="POST" id="form-one">
+      <label for="name">Name:</label>
+      <!--on input tag : https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets-->
+      <input type="text" id="name" name="name" />
+    </form>
+  </article>
+
+  <script type="text/javascript" src="js/bundle.js"></script>
+</body>
+
+</html>
