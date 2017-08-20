@@ -57,12 +57,20 @@ or to watch for changes inside main.js and re-bundle
 
 `npm run watchify`
 
+## Future Features
+
+1. Use cookies to save form data within browser
+2. Use built-in browser database to store data
 
 ## Resources
 
 * [Form Basics](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
 
 * [form widgets](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
+
+* [Sending data- server side](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
+
+* [using cookies with forms](http://www.the-art-of-web.com/javascript/setcookie/)
 
 * [Forms with NodeJS](https://www.sitepoint.com/creating-and-handling-forms-in-node-js/)
 
@@ -71,6 +79,8 @@ or to watch for changes inside main.js and re-bundle
   * [express body-parser](https://github.com/expressjs/body-parser/)
 
 * [Fetch API](https://developer.mozilla.org/en-US/docs/AJAX)
+
+* [ReactJS forms](https://facebook.github.io/react/docs/forms.html)
 
 ### Sending emails
 
