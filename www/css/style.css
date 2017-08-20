@@ -16,3 +16,7 @@
   transition: .8s ease-in-out;
   opacity: 0;
 }
+
+article {
+  background-color: #d3d3d3;
+}

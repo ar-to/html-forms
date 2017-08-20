@@ -1,11 +1,15 @@
 {
   "name": "html-forms",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "testing html form via nodejs, express, and more",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "nodemon": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy 'localhost:3000' --serveStatic 'www' --files 'www'",
+    "browserify": "browserify ./src/js/main.js -o ./www/js/bundle.js",
+    "watchify": "watchify ./src/js/main.js -o ./www/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +30,11 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
   }
 }

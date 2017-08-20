@@ -13,11 +13,16 @@
     <div id="status"></div>
   </div>
   <article>
+    <h3>Input tests</h3>
     <main>
       <input type="text" id="onInput" value="on input" />
       <p id="onInput-p"></p>
     </main>
     <main>
+      <video width="auto" height="100" controls>
+        <source src="vid/on-change-input-w-loadbar.mp4" type="video/mp4" />
+        Your Browser does not support the video tag.
+      </video>
       <input type="text" id="onChange" value="on change" />
       <p id="onChange-p"></p>
     </main>
@@ -30,7 +35,21 @@
       <input type="text" id="name" name="name" />
     </form>
   </article>
+  <article>
+    <h3>Test Form 2</h3>
+    <form method="POST" id="testForm">
+      <label>First name:</label>
+      <input type="text" name="firstName"><br>
+      <label>Last name:</label>
+      <input type="text" name="lastName">
+      <button type="submit" id="submitButton">Submit</button>
+    </form>
+  </article>
+  <h3 id="form-data-raw"></h3>
+  <h3 id="form-data"></h3>
+  <h3 id="form-data2"></h3>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/bundle.js"></script>
 </body>
 
