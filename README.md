@@ -22,6 +22,8 @@ start server
 
 test forms
 
+test [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) by checking the dev tools.
+
 ## Development
 
 If you want to experiment with the code and make new forms or changes to the existing forms then follow the notes below. You will notice that I did not use a task runner like gulp/grunt because I wanted to test how all of these tools would work independently but also because I tend to run them globally when I'm making test projects like these.
