@@ -50,8 +50,8 @@ module.exports = function() {
 
   //function to print data to browser
   function successHandler(jsonData) {
-    console.log('works');//prints to browser console
-    console.log(jsonData);
+    console.log('ajax post success handler works!');//prints to browser console
+    console.log(`ajax post jsonData:` + JSON.stringify(jsonData));
     const formDataRaw = document.querySelector('#form-data-raw'),
       formData = document.querySelector('#form-data'),
       formData2 = document.querySelector('#form-data2'),
@@ -76,12 +76,74 @@ module.exports = function() {
   })
 };
 
-},{"./status_bar":5}],2:[function(require,module,exports){
+},{"./status_bar":10}],2:[function(require,module,exports){
+const populateStorage = require('./local_storage/populateStorage'),
+  setStorage = require('./local_storage/setStorage'),
+  deleteStorage = require('./local_storage/delete_storage'),
+  varObj = require('./local_storage/varObj');
+
+module.exports = function() {
+
+//store default markup value to localStorage and check
+  if(localStorage.getItem('inputValueForm1Storage')) {//if theres a value stored = true
+    setStorage();//gets value stored and makes it equal the element.value
+    console.log('add storage value to form1 input');
+  } else {//if no value was stored
+    //populateStorage.add();//set element.value to storage value
+    populateStorage.add();
+    console.log('store input value the first time browser loaded');
+  }
+
+populateStorage.element.onchange = populateStorage.add;
+varObj.Form1DeleteStorageValueElement.onclick = function(e) {console.log(e)}
+varObj.Form1DeleteStorageValueElement.onclick = function(e) {deleteStorage.removeSingle('inputValueForm1Storage');}
+//console.log(populateStorage.element);
+};
+
+},{"./local_storage/delete_storage":3,"./local_storage/populateStorage":4,"./local_storage/setStorage":5,"./local_storage/varObj":6}],3:[function(require,module,exports){
+
+module.exports = {
+  removeSingle : function(keyname) {
+    localStorage.removeItem(keyname);
+    console.log('remove single keyvalue');
+  }
+}
+
+},{}],4:[function(require,module,exports){
+'use strict';
+module.exports = {
+  element : document.querySelector('#form-one #name'),//get element
+  add : function() {
+      let inputForm1Value = document.querySelector('#form-one #name');//get element
+
+      localStorage.setItem('inputValueForm1Storage', inputForm1Value.value);//create storage to element.value
+  }
+};
+
+},{}],5:[function(require,module,exports){
+const populateStorage = require('./populateStorage');
+
+module.exports = function() {
+  //let inputForm1Value = document.querySelector('#form-one #name');
+  let currentValue = localStorage.getItem('inputValueForm1Storage');
+
+  populateStorage.element.value = currentValue;//element value = stored value
+}
+
+},{"./populateStorage":4}],6:[function(require,module,exports){
+
+module.exports = {
+  inputForm1Element : document.querySelector('#form-one #name'),
+  Form1DeleteStorageValueElement : document.querySelector('#form1DeleteStorageValue')
+}
+
+},{}],7:[function(require,module,exports){
 const oninput = require('./oninput')(),
   onchange = require('./onchange')(),
-  formOne = require('./form-one-handler')();
+  formOne = require('./form-one-handler')(),
+  localStorage = require('./localStorage')();
 
-},{"./form-one-handler":1,"./onchange":3,"./oninput":4}],3:[function(require,module,exports){
+},{"./form-one-handler":1,"./localStorage":2,"./onchange":8,"./oninput":9}],8:[function(require,module,exports){
 const statusBar = require('./status_bar');
 
 module.exports = function(){
@@ -100,7 +162,7 @@ module.exports = function(){
   }
 }
 
-},{"./status_bar":5}],4:[function(require,module,exports){
+},{"./status_bar":10}],9:[function(require,module,exports){
 
 module.exports = function() {
 
@@ -116,7 +178,7 @@ module.exports = function() {
   }
 }
 
-},{}],5:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 
 module.exports = function() {
   var status = document.querySelector('#status'),
@@ -135,4 +197,4 @@ module.exports = function() {
   }
 }
 
-},{}]},{},[2]);
+},{}]},{},[7]);

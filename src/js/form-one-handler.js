@@ -49,8 +49,8 @@ module.exports = function() {
 
   //function to print data to browser
   function successHandler(jsonData) {
-    console.log('works');//prints to browser console
-    console.log(jsonData);
+    console.log('ajax post success handler works!');//prints to browser console
+    console.log(`ajax post jsonData:` + JSON.stringify(jsonData));
     const formDataRaw = document.querySelector('#form-data-raw'),
       formData = document.querySelector('#form-data'),
       formData2 = document.querySelector('#form-data2'),
