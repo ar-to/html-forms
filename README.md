@@ -63,6 +63,8 @@ or to watch for changes inside main.js and re-bundle
 
 1. Use cookies to save form data within browser
 2. Use built-in browser database to store data
+3. Get emails to work
+4. Setup foreman to automate all the npm scripts at once
 
 ## Resources
 
